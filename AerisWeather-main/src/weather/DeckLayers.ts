@@ -288,7 +288,7 @@ export class DeckLayers {
     const heightNoise = generateHeightNoise(noiseW, noiseH, seed + 33);
     const stormNoise  = generateStormNoise(noiseW, noiseH, seed + 77);
 
-    const points: typeof this.volumetricClouds = [];
+    const points: Array<{ position: [number, number, number]; normal: [number, number, number]; color: [number, number, number]; bandIdx: number }> = [];
     const regionRadius = 0.8;
     const gridStep = 0.008;
 
